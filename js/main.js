@@ -1,103 +1,121 @@
-// Модальное окно
-const orderDialog = document.getElementById('order-dialog');
+document.addEventListener('DOMContentLoaded', () => {
 
-// Кнопки заказа
-const orderButtons = document.querySelectorAll('.product-card__button');
+  /* ===============================
+     Модальное окно заказа
+     =============================== */
 
-// Кнопка закрытия
-const closeDialogButton = document.getElementById('close-order-dialog');
+  const orderDialog = document.getElementById('order-dialog');
+  const closeDialogButton = document.getElementById('close-order-dialog');
+  const cancelOrderButton = document.getElementById('cancel-order');
+  const selectedProductInput = document.getElementById('selected-product');
+  const orderForm = document.getElementById('order-form');
+  const successMessage = document.getElementById('success-message');
 
-// Скрытое поле выбранного товара
-const selectedProductInput =
-  document.getElementById('selected-product');
+  const productButtons = document.querySelectorAll(
+    '.product-card__button'
+  );
 
-// Форма
-const orderForm = document.getElementById('order-form');
-
-// Сообщение об успешной отправке
-const successMessage =
-  document.getElementById('success-message');
-
-
-// Проверяем, что элементы формы существуют.
-// Это позволяет безопасно подключать JS только к нужным страницам.
-if (
-  orderDialog &&
-  orderButtons.length > 0 &&
-  closeDialogButton &&
-  selectedProductInput &&
-  orderForm &&
-  successMessage
-) {
-
-  // Открытие модального окна
-  orderButtons.forEach((button) => {
-
+  productButtons.forEach((button) => {
     button.addEventListener('click', () => {
 
       const productName = button.dataset.product;
 
-      selectedProductInput.value = productName;
+      if (selectedProductInput) {
+        selectedProductInput.value = productName || '';
+      }
 
-      orderDialog.showModal();
+      if (orderDialog) {
+        orderDialog.showModal();
+      }
     });
-
   });
 
+  const closeDialog = () => {
+    if (orderDialog) {
+      orderDialog.close();
+    }
+  };
 
-  // Закрытие модального окна
-  closeDialogButton.addEventListener('click', () => {
-    orderDialog.close();
-  });
+  if (closeDialogButton) {
+    closeDialogButton.addEventListener('click', closeDialog);
+  }
 
+  if (cancelOrderButton) {
+    cancelOrderButton.addEventListener('click', closeDialog);
+  }
 
-  // Отправка формы
-  orderForm.addEventListener('submit', (event) => {
+  if (orderDialog) {
+    orderDialog.addEventListener('click', (event) => {
 
-    event.preventDefault();
-
-    // Убираем предыдущие признаки ошибок
-    const formElements = Array.from(orderForm.elements);
-
-    formElements.forEach((element) => {
-
-      if (element.willValidate) {
-        element.removeAttribute('aria-invalid');
+      if (event.target === orderDialog) {
+        closeDialog();
       }
 
     });
+  }
 
+  if (orderForm) {
+    orderForm.addEventListener('submit', (event) => {
 
-    // Проверяем встроенную HTML-валидацию
-    if (!orderForm.checkValidity()) {
+      event.preventDefault();
 
-      formElements.forEach((element) => {
+      if (!orderForm.checkValidity()) {
+        orderForm.reportValidity();
+        return;
+      }
 
-        if (
-          element.willValidate &&
-          !element.checkValidity()
-        ) {
-          element.setAttribute('aria-invalid', 'true');
-        }
+      orderForm.reset();
 
+      if (selectedProductInput) {
+        selectedProductInput.value = '';
+      }
+
+      closeDialog();
+
+      if (successMessage) {
+
+        successMessage.hidden = false;
+
+        setTimeout(() => {
+          successMessage.hidden = true;
+        }, 3000);
+
+      }
+
+    });
+  }
+
+  /* ===============================
+     Кнопка "Наверх"
+     =============================== */
+
+  const scrollTopButton = document.getElementById('scroll-top');
+
+  if (scrollTopButton) {
+
+    const updateScrollButton = () => {
+
+      if (window.scrollY > 300) {
+        scrollTopButton.classList.add('scroll-top--visible');
+      } else {
+        scrollTopButton.classList.remove('scroll-top--visible');
+      }
+
+    };
+
+    window.addEventListener('scroll', updateScrollButton);
+
+    updateScrollButton();
+
+    scrollTopButton.addEventListener('click', () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
 
-      orderForm.reportValidity();
+    });
 
-      return;
-    }
+  }
 
-
-    // Показываем сообщение
-    successMessage.hidden = false;
-
-
-    // Очищаем форму
-    orderForm.reset();
-
-
-    // Закрываем окно
-    orderDialog.close();
-  });
-
-}
+});

@@ -2,151 +2,271 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta
     name="description"
-    content="Контактная информация учебного интернет-магазина."
+    content="Контактная информация ShopProject."
   >
-  <title>Контакты — ShopProject</title>
+
+  <title>ShopProject — Контакты</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="site-header__inner">
+<header class="site-header">
+  <div class="site-header__inner">
 
-      <a class="site-header__logo" href="index.html">
-        ShopProject
-      </a>
+    <a class="site-header__logo" href="index.html">
+      ShopProject
+    </a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
 
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">
-              Главная
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html">
+            Главная
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">
-              Каталог
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="catalog.html">
+            Каталог
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link site-nav__link--active"
-              href="contacts.html"
-            >
-              Контакты
-            </a>
-          </li>
+        <li>
+          <a
+            class="site-nav__link site-nav__link--active"
+            href="contacts.html"
+            aria-current="page"
+          >
+            Контакты
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#advantages"
-            >
-              Преимущества
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html#advantages">
+            Преимущества
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#popular"
-            >
-              Популярные товары
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html#popular">
+            Популярные товары
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#contacts"
-            >
-              Обратная связь
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="#feedback">
+            Обратная связь
+          </a>
+        </li>
 
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-  <main>
-
-    <nav
-      class="breadcrumbs"
-      aria-label="Хлебные крошки"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="index.html"
-      >
-        Главная
-      </a>
-
-      <span class="breadcrumbs__current">
-        Контакты
-      </span>
+      </ul>
     </nav>
 
-    <section class="section">
+  </div>
+</header>
 
-      <h1>Контакты</h1>
+<main>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+
+    <a class="breadcrumbs__link" href="index.html">
+      Главная
+    </a>
+
+    <span class="breadcrumbs__current">
+      Контакты
+    </span>
+
+  </nav>
+
+  <section class="section">
+
+    <h1>Контакты</h1>
+
+    <div class="contacts-info">
+
+      <h2>Свяжитесь с нами</h2>
 
       <p>
-        Здесь размещается контактная информация учебного
-        интернет-магазина.
+        Если у вас есть вопросы по товарам или заказу,
+        воспользуйтесь контактной информацией.
       </p>
-
-      <ul>
-        <li>Телефон: +7 (900) 000-00-00</li>
-        <li>E-mail: info@example.com</li>
-        <li>Адрес: г. Москва, учебный проект</li>
-      </ul>
-
-    </section>
-
-    <section
-      class="section"
-      id="feedback"
-    >
-
-      <h2>Обратная связь</h2>
 
       <p>
-        Для отправки заявки используйте форму
-        в модальном окне на главной странице.
+        <strong>Email:</strong>
+        shopproject@example.com
       </p>
 
-      <a
-        class="button button--primary"
-        href="index.html#contacts"
-      >
-        Перейти к форме
-      </a>
+      <p>
+        <strong>Телефон:</strong>
+        +7 (999) 123-45-67
+      </p>
 
-    </section>
+      <p>
+        <strong>Адрес:</strong>
+        г. Москва, учебный проект ShopProject
+      </p>
 
-  </main>
+    </div>
 
-  <footer class="site-footer">
+  </section>
 
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  <section class="section" id="feedback">
+
+    <h2>Обратная связь</h2>
+
+    <form class="order-form" action="#" method="post">
+
+      <div class="order-form__field">
+
+        <label
+          class="order-form__label"
+          for="contact-name"
+        >
+          Имя
+        </label>
+
+        <input
+          class="order-form__input"
+          id="contact-name"
+          name="name"
+          type="text"
+          placeholder="Введите имя"
+          required
+        >
+
+      </div>
+
+      <div class="order-form__field">
+
+        <label
+          class="order-form__label"
+          for="contact-email"
+        >
+          Email
+        </label>
+
+        <input
+          class="order-form__input"
+          id="contact-email"
+          name="email"
+          type="email"
+          placeholder="example@mail.ru"
+          required
+        >
+
+      </div>
+
+      <div class="order-form__field">
+
+        <label
+          class="order-form__label"
+          for="contact-topic"
+        >
+          Тема обращения
+        </label>
+
+        <select
+          class="order-form__select"
+          id="contact-topic"
+          name="topic"
+          required
+        >
+          <option value="">
+            Выберите тему
+          </option>
+
+          <option value="question">
+            Вопрос
+          </option>
+
+          <option value="order">
+            Заказ
+          </option>
+
+          <option value="other">
+            Другое
+          </option>
+        </select>
+
+      </div>
+
+      <div class="order-form__field">
+
+        <label
+          class="order-form__label"
+          for="contact-message"
+        >
+          Сообщение
+        </label>
+
+        <textarea
+          class="order-form__textarea"
+          id="contact-message"
+          name="message"
+          rows="6"
+          placeholder="Введите сообщение"
+          required
+        ></textarea>
+
+      </div>
+
+      <div class="order-form__actions">
+
+        <button
+          class="button button--primary"
+          type="submit"
+        >
+          Отправить
+        </button>
+
+        <button
+          class="button button--secondary"
+          type="reset"
+        >
+          Очистить
+        </button>
+
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="site-footer__inner">
 
     <p>
-      Дисциплина: Фронтенд и бэкенд разработка
+      &copy; 2025 ShopProject. Учебный проект.
     </p>
 
-  </footer>
+    <p>
+      Автор: Дончу Артём, группа ЭФБО-03-25.
+    </p>
+
+  </div>
+
+</footer>
+
+<button
+  class="scroll-top"
+  id="scroll-top"
+  type="button"
+  aria-label="Вернуться в начало страницы"
+>
+  ↑ Наверх
+</button>
 
 </body>
 </html>

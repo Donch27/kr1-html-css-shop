@@ -3,285 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta
     name="description"
-    content="Каталог товаров учебного интернет-магазина."
+    content="Каталог товаров ShopProject."
   >
-  <title>Каталог товаров — ShopProject</title>
+
+  <title>ShopProject — Каталог</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="site-header__inner">
+<header class="site-header">
+  <div class="site-header__inner">
 
-      <a class="site-header__logo" href="index.html">
-        ShopProject
-      </a>
+    <a class="site-header__logo" href="index.html">
+      ShopProject
+    </a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
 
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">
-              Главная
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html">
+            Главная
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link site-nav__link--active"
-              href="catalog.html"
-            >
-              Каталог
-            </a>
-          </li>
+        <li>
+          <a
+            class="site-nav__link site-nav__link--active"
+            href="catalog.html"
+            aria-current="page"
+          >
+            Каталог
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">
-              Контакты
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="contacts.html">
+            Контакты
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#advantages"
-            >
-              Преимущества
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html#advantages">
+            Преимущества
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#popular"
-            >
-              Популярные товары
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html#popular">
+            Популярные товары
+          </a>
+        </li>
 
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              href="index.html#contacts"
-            >
-              Обратная связь
-            </a>
-          </li>
+        <li>
+          <a class="site-nav__link" href="index.html#contacts">
+            Обратная связь
+          </a>
+        </li>
 
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-  <main>
-
-    <nav
-      class="breadcrumbs"
-      aria-label="Хлебные крошки"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="index.html"
-      >
-        Главная
-      </a>
-
-      <span class="breadcrumbs__current">
-        Каталог
-      </span>
+      </ul>
     </nav>
 
-    <section class="section">
-      <h1>Каталог товаров</h1>
+  </div>
+</header>
 
-      <p>
-        На этой странице представлен учебный каталог товаров.
-        Здесь можно использовать фильтры и просматривать карточки товаров.
-      </p>
-    </section>
+<main>
 
-    <section class="catalog-layout">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a class="breadcrumbs__link" href="index.html">
+      Главная
+    </a>
 
-      <!-- Фильтры -->
-      <aside class="catalog-filters">
+    <span class="breadcrumbs__current">
+      Каталог
+    </span>
+  </nav>
 
-        <h2>Фильтры</h2>
+  <section class="section">
 
-        <form
-          class="filters-form"
-          action="#"
-          method="get"
-        >
-
-          <fieldset>
-            <legend>Категория</legend>
-
-            <label>
-              <input
-                type="checkbox"
-                name="category"
-                value="all"
-              >
-              Все товары
-            </label>
-
-            <label>
-              <input
-                type="checkbox"
-                name="category"
-                value="popular"
-              >
-              Популярные
-            </label>
-
-            <label>
-              <input
-                type="checkbox"
-                name="category"
-                value="new"
-              >
-              Новинки
-            </label>
-          </fieldset>
-
-          <fieldset>
-
-            <legend>Цена</legend>
-
-            <label for="price-from">
-              От
-            </label>
-
-            <input
-              id="price-from"
-              name="price-from"
-              type="number"
-              min="0"
-              placeholder="0"
-            >
-
-            <label for="price-to">
-              До
-            </label>
-
-            <input
-              id="price-to"
-              name="price-to"
-              type="number"
-              min="0"
-              placeholder="5000"
-            >
-
-          </fieldset>
-
-          <button
-            class="button button--primary"
-            type="submit"
-          >
-            Применить
-          </button>
-
-        </form>
-
-      </aside>
-
-      <!-- Товары -->
-      <section class="catalog-products">
-
-        <h2>Список товаров</h2>
-
-        <div class="products-grid">
-
-          <article class="product-card">
-
-            <h3 class="product-card__title">
-              Товар 1
-            </h3>
-
-            <p class="product-card__description">
-              Краткое описание учебного товара.
-            </p>
-
-            <p class="product-card__price">
-              Цена: 1000 руб.
-            </p>
-
-            <a
-              class="button button--primary product-card__button"
-              href="index.html#popular"
-            >
-              Подробнее
-            </a>
-
-          </article>
-
-          <article class="product-card">
-
-            <h3 class="product-card__title">
-              Товар 2
-            </h3>
-
-            <p class="product-card__description">
-              Краткое описание учебного товара.
-            </p>
-
-            <p class="product-card__price">
-              Цена: 1500 руб.
-            </p>
-
-            <a
-              class="button button--primary product-card__button"
-              href="index.html#popular"
-            >
-              Подробнее
-            </a>
-
-          </article>
-
-          <article class="product-card">
-
-            <h3 class="product-card__title">
-              Товар 3
-            </h3>
-
-            <p class="product-card__description">
-              Краткое описание учебного товара.
-            </p>
-
-            <p class="product-card__price">
-              Цена: 2000 руб.
-            </p>
-
-            <a
-              class="button button--primary product-card__button"
-              href="index.html#popular"
-            >
-              Подробнее
-            </a>
-
-          </article>
-
-        </div>
-
-      </section>
-
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <h1>Каталог товаров</h1>
 
     <p>
-      Дисциплина: Фронтенд и бэкенд разработка
+      Выберите подходящий товар из нашего каталога.
     </p>
 
-  </footer>
+  </section>
+
+  <section class="catalog-layout">
+
+    <aside class="catalog-filters">
+
+      <h2>Фильтры</h2>
+
+      <form class="filters-form" action="#" method="get">
+
+        <fieldset>
+          <legend>Категория</legend>
+
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="all"
+            >
+            Все товары
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="popular"
+            >
+            Популярные
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="new"
+            >
+            Новинки
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Цена</legend>
+
+          <label for="price-from">
+            От
+          </label>
+
+          <input
+            id="price-from"
+            name="price-from"
+            type="number"
+            min="0"
+            placeholder="0"
+          >
+
+          <label for="price-to">
+            До
+          </label>
+
+          <input
+            id="price-to"
+            name="price-to"
+            type="number"
+            min="0"
+            placeholder="5000"
+          >
+        </fieldset>
+
+        <button
+          class="button button--primary"
+          type="submit"
+        >
+          Применить
+        </button>
+
+      </form>
+
+    </aside>
+
+    <section class="catalog-products">
+
+      <h2>Список товаров</h2>
+
+      <div class="products-grid">
+
+        <article class="product-card product-card--featured">
+
+          <h3 class="product-card__title">
+            Товар 1
+          </h3>
+
+          <p class="product-card__description">
+            Краткое описание учебного товара.
+          </p>
+
+          <p class="product-card__price">
+            Цена: 1000 руб.
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Товар 1"
+          >
+            Подробнее
+          </button>
+
+        </article>
+
+        <article class="product-card">
+
+          <h3 class="product-card__title">
+            Товар 2
+          </h3>
+
+          <p class="product-card__description">
+            Краткое описание второго учебного товара.
+          </p>
+
+          <p class="product-card__price">
+            Цена: 1500 руб.
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Товар 2"
+          >
+            Подробнее
+          </button>
+
+        </article>
+
+        <article class="product-card">
+
+          <h3 class="product-card__title">
+            Товар 3
+          </h3>
+
+          <p class="product-card__description">
+            Краткое описание третьего учебного товара.
+          </p>
+
+          <p class="product-card__price">
+            Цена: 2000 руб.
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Товар 3"
+          >
+            Подробнее
+          </button>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="site-footer__inner">
+
+    <p>
+      &copy; 2025 ShopProject. Учебный проект.
+    </p>
+
+    <p>
+      Автор: Дончу Артём, группа ЭФБО-03-25.
+    </p>
+
+  </div>
+
+</footer>
+
+<button
+  class="scroll-top"
+  id="scroll-top"
+  type="button"
+  aria-label="Вернуться в начало страницы"
+>
+  ↑ Наверх
+</button>
 
 </body>
 </html>
