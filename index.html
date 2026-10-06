@@ -1,376 +1,639 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="ShopProject — учебный интернет-магазин с каталогом товаров."
-  >
-  <title>ShopProject — Главная</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>IceForce — хоккейный магазин</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="site-header__inner">
+    <div class="site-header__inner">
 
-    <a class="site-header__logo" href="index.html">
-      ShopProject
-    </a>
+        <a class="site-header__logo" href="index.html">
+            IceForce
+        </a>
 
-    <nav class="site-nav" aria-label="Основная навигация">
-      <ul class="site-nav__list">
-        <li>
-          <a class="site-nav__link site-nav__link--active"
-             href="index.html"
-             aria-current="page">
-            Главная
-          </a>
-        </li>
-        <li>
-          <a class="site-nav__link" href="catalog.html">
-            Каталог
-          </a>
-        </li>
-        <li>
-          <a class="site-nav__link" href="contacts.html">
-            Контакты
-          </a>
-        </li>
-        <li>
-          <a class="site-nav__link" href="#advantages">
-            Преимущества
-          </a>
-        </li>
-        <li>
-          <a class="site-nav__link" href="#popular">
-            Популярные товары
-          </a>
-        </li>
-        <li>
-          <a class="site-nav__link" href="#contacts">
-            Обратная связь
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
 
-  </div>
+                <li>
+                    <a
+                        class="site-nav__link site-nav__link--active"
+                        href="index.html"
+                    >
+                        Главная
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="site-nav__link"
+                        href="catalog.html"
+                    >
+                        Каталог
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="site-nav__link"
+                        href="contacts.html"
+                    >
+                        Контакты
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="site-nav__link"
+                        href="#advantages"
+                    >
+                        Преимущества
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="site-nav__link"
+                        href="#popular"
+                    >
+                        Товары
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="site-nav__link"
+                        href="#contacts"
+                    >
+                        Обратная связь
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
 </header>
+
 
 <main>
 
-  <nav class="breadcrumbs" aria-label="Хлебные крошки">
-    <a class="breadcrumbs__link" href="index.html">Главная</a>
-    <span class="breadcrumbs__current">Главная</span>
-  </nav>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <span class="breadcrumbs__current">
+            Главная
+        </span>
+    </nav>
 
-  <section class="hero">
-    <div class="hero__content">
-      <h1>Добро пожаловать в ShopProject</h1>
 
-      <p>
-        Учебный интернет-магазин с простым каталогом товаров,
-        удобной навигацией и формой заказа.
-      </p>
+    <section class="hero">
+        <div class="container">
 
-      <a class="button button--primary" href="catalog.html">
-        Перейти в каталог
-      </a>
-    </div>
-  </section>
+            <h1 class="hero__title">
+                IceForce — хоккейный магазин
+            </h1>
 
-  <section class="section" id="advantages">
-    <h2>Наши преимущества</h2>
+            <p class="hero__text">
+                Всё необходимое для тренировок и матчей:
+                хоккейная экипировка, защита и инвентарь.
+            </p>
 
-    <div class="advantages-grid">
+            <a
+                class="button button--primary"
+                href="#popular"
+            >
+                Смотреть товары
+            </a>
 
-      <article class="advantage-card">
-        <h3>Простота</h3>
+        </div>
+    </section>
+
+
+    <section
+        class="advantages container"
+        id="advantages"
+    >
+
+        <h2 class="section-title">
+            Почему выбирают IceForce
+        </h2>
+
+        <div class="advantages__grid">
+
+            <article class="advantage">
+                <h3 class="advantage__title">
+                    Качественная экипировка
+                </h3>
+
+                <p class="advantage__text">
+                    Подбираем практичную экипировку
+                    для тренировок и соревнований.
+                </p>
+            </article>
+
+
+            <article class="advantage">
+                <h3 class="advantage__title">
+                    Защита и комфорт
+                </h3>
+
+                <p class="advantage__text">
+                    В каталоге есть экипировка,
+                    которая помогает чувствовать себя
+                    уверенно на льду.
+                </p>
+            </article>
+
+
+            <article class="advantage">
+                <h3 class="advantage__title">
+                    Для начинающих и опытных
+                </h3>
+
+                <p class="advantage__text">
+                    Товары подходят как начинающим
+                    хоккеистам, так и опытным игрокам.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="popular container"
+        id="popular"
+    >
+
+        <h2 class="section-title">
+            Популярные товары
+        </h2>
+
+        <div class="products-grid">
+
+
+            <!-- ТОВАР 1 -->
+
+            <article
+                class="product-card product-card--featured"
+            >
+
+                <div class="product-card__image-wrapper">
+
+                    <span class="product-card__badge">
+                        Хит
+                    </span>
+
+                    <img
+                        class="product-card__image"
+                        src="images/hockey-stick.jpg"
+                        alt="Хоккейная клюшка"
+                    >
+
+                </div>
+
+                <p class="product-card__category">
+                    Категория: Инвентарь
+                </p>
+
+                <h3 class="product-card__title">
+                    Хоккейная клюшка
+                </h3>
+
+                <p class="product-card__description">
+                    Лёгкая и прочная клюшка для точных
+                    передач и мощных бросков.
+                </p>
+
+                <p class="product-card__price">
+                    1000 руб.
+                </p>
+
+                <button
+                    class="button button--primary product-card__button"
+                    type="button"
+                    data-product="Хоккейная клюшка"
+                >
+                    Заказать
+                </button>
+
+            </article>
+
+
+            <!-- ТОВАР 2 -->
+
+            <article class="product-card">
+
+                <div class="product-card__image-wrapper">
+
+                    <span
+                        class="product-card__badge product-card__badge--new"
+                    >
+                        Новинка
+                    </span>
+
+                    <img
+                        class="product-card__image"
+                        src="images/hockey-chest.jpg"
+                        alt="Хоккейный нагрудник"
+                    >
+
+                </div>
+
+                <p class="product-card__category">
+                    Категория: Защита
+                </p>
+
+                <h3 class="product-card__title">
+                    Хоккейный нагрудник
+                </h3>
+
+                <p class="product-card__description">
+                    Защитный нагрудник с усиленными плечами
+                    для уверенной игры и тренировок.
+                </p>
+
+                <p class="product-card__price">
+                    1500 руб.
+                </p>
+
+                <button
+                    class="button button--primary product-card__button"
+                    type="button"
+                    data-product="Хоккейный нагрудник"
+                >
+                    Заказать
+                </button>
+
+            </article>
+
+
+            <!-- ТОВАР 3 -->
+
+            <article class="product-card">
+
+                <div class="product-card__image-wrapper">
+
+                    <span
+                        class="product-card__badge product-card__badge--discount"
+                    >
+                        Популярный
+                    </span>
+
+                    <img
+                        class="product-card__image"
+                        src="images/hockey-helmet.jpg"
+                        alt="Хоккейный шлем"
+                    >
+
+                </div>
+
+                <p class="product-card__category">
+                    Категория: Защита
+                </p>
+
+                <h3 class="product-card__title">
+                    Хоккейный шлем
+                </h3>
+
+                <p class="product-card__description">
+                    Надёжный шлем с защитной решёткой
+                    и удобной посадкой для игрока.
+                </p>
+
+                <p class="product-card__price">
+                    2000 руб.
+                </p>
+
+                <button
+                    class="button button--primary product-card__button"
+                    type="button"
+                    data-product="Хоккейный шлем"
+                >
+                    Заказать
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="info-block container">
+
+        <h2 class="section-title">
+            IceForce
+        </h2>
+
         <p>
-          Удобный и понятный интерфейс для просмотра товаров.
+            Мы создаём простой и удобный каталог
+            хоккейной экипировки для игроков любого уровня.
         </p>
-      </article>
 
-      <article class="advantage-card">
-        <h3>Удобство</h3>
         <p>
-          Быстрый переход между страницами и разделами сайта.
-        </p>
-      </article>
-
-      <article class="advantage-card">
-        <h3>Надёжность</h3>
-        <p>
-          Простая форма заказа с проверкой введённых данных.
-        </p>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="section" id="popular">
-    <h2>Популярные товары</h2>
-
-    <div class="products-grid">
-
-      <article class="product-card product-card--featured">
-        <h3 class="product-card__title">Товар 1</h3>
-
-        <p class="product-card__description">
-          Краткое описание учебного товара.
+            Выберите нужный товар и оставьте заявку —
+            мы свяжемся с вами для уточнения деталей.
         </p>
 
-        <p class="product-card__price">
-          Цена: 1000 руб.
-        </p>
-
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 1"
-        >
-          Заказать
-        </button>
-      </article>
-
-      <article class="product-card">
-        <h3 class="product-card__title">Товар 2</h3>
-
-        <p class="product-card__description">
-          Краткое описание второго учебного товара.
-        </p>
-
-        <p class="product-card__price">
-          Цена: 1500 руб.
-        </p>
-
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 2"
-        >
-          Заказать
-        </button>
-      </article>
-
-      <article class="product-card">
-        <h3 class="product-card__title">Товар 3</h3>
-
-        <p class="product-card__description">
-          Краткое описание третьего учебного товара.
-        </p>
-
-        <p class="product-card__price">
-          Цена: 2000 руб.
-        </p>
-
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 3"
-        >
-          Заказать
-        </button>
-      </article>
-
-    </div>
-  </section>
-
-  <aside class="info-block">
-    <h2>Полезная информация</h2>
-
-    <p>
-      Чтобы оформить заказ, выберите подходящий товар
-      и заполните форму.
-    </p>
-
-    <a class="button button--secondary" href="contacts.html">
-      Контакты
-    </a>
-  </aside>
+    </section>
 
 </main>
 
-<footer class="site-footer" id="contacts">
-  <div class="site-footer__inner">
-    <p>&copy; 2025 ShopProject. Учебный проект.</p>
-    <p>Автор: Дончу Артём, группа ЭФБО-03-25.</p>
-  </div>
+
+<footer
+    class="site-footer"
+    id="contacts"
+>
+
+    <div class="container">
+
+        <h2 class="site-footer__title">
+            Обратная связь
+        </h2>
+
+        <p>
+            Email:
+            <a href="mailto:info@iceforce.ru">
+                info@iceforce.ru
+            </a>
+        </p>
+
+        <p>
+            Телефон:
+            <a href="tel:+79990000000">
+                +7 (999) 000-00-00
+            </a>
+        </p>
+
+        <p class="site-footer__copyright">
+            © 2026 IceForce. Учебный проект.
+        </p>
+
+    </div>
+
 </footer>
 
-<dialog class="order-dialog" id="order-dialog">
 
-  <div class="order-dialog__content">
+<!-- МОДАЛЬНОЕ ОКНО -->
 
-    <button
-      class="order-dialog__close"
-      id="close-order-dialog"
-      type="button"
-      aria-label="Закрыть окно"
-    >
-      &times;
-    </button>
+<dialog
+    class="order-dialog"
+    id="order-dialog"
+>
 
-    <h2 class="order-dialog__title">
-      Оформление заказа
-    </h2>
+    <div class="order-dialog__content">
 
-    <form class="order-form" id="order-form">
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="selected-product">
-          Товар
-        </label>
-
-        <input
-          class="order-form__input"
-          id="selected-product"
-          name="product"
-          type="text"
-          readonly
-        >
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="name">
-          Имя
-        </label>
-
-        <input
-          class="order-form__input"
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Введите имя"
-          required
-        >
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="email">
-          Email
-        </label>
-
-        <input
-          class="order-form__input"
-          id="email"
-          name="email"
-          type="email"
-          placeholder="example@mail.ru"
-          required
-        >
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="phone">
-          Телефон
-        </label>
-
-        <input
-          class="order-form__input"
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="+7 (999) 123-45-67"
-          required
-        >
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="date">
-          Дата заказа
-        </label>
-
-        <input
-          class="order-form__input"
-          id="date"
-          name="date"
-          type="date"
-          required
-        >
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="topic">
-          Тема обращения
-        </label>
-
-        <select
-          class="order-form__select"
-          id="topic"
-          name="topic"
-          required
-        >
-          <option value="">Выберите тему</option>
-          <option value="order">Заказ товара</option>
-          <option value="question">Вопрос о товаре</option>
-          <option value="other">Другое</option>
-        </select>
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__label" for="comment">
-          Комментарий
-        </label>
-
-        <textarea
-          class="order-form__textarea"
-          id="comment"
-          name="comment"
-          rows="4"
-          placeholder="Ваш комментарий"
-        ></textarea>
-      </div>
-
-      <div class="order-form__field">
-        <label class="order-form__checkbox">
-          <input
-            type="checkbox"
-            name="agreement"
-            required
-          >
-          <span>
-            Я согласен на обработку персональных данных
-          </span>
-        </label>
-      </div>
-
-      <div class="order-form__actions">
-        <button class="button button--primary" type="submit">
-          Отправить заказ
-        </button>
+        <h2 class="order-dialog__title">
+            Заказ товара
+        </h2>
 
         <button
-          class="button button--secondary"
-          id="cancel-order"
-          type="button"
+            class="order-dialog__close"
+            id="close-order-dialog"
+            type="button"
+            aria-label="Закрыть окно"
         >
-          Отмена
+            ×
         </button>
-      </div>
 
-    </form>
 
-  </div>
+        <form
+            class="order-form"
+            id="order-form"
+        >
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="selected-product"
+                >
+                    Товар
+                </label>
+
+                <input
+                    class="order-form__input"
+                    id="selected-product"
+                    name="product"
+                    type="text"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="name"
+                >
+                    Имя
+                </label>
+
+                <input
+                    class="order-form__input"
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                >
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="email"
+                >
+                    Email
+                </label>
+
+                <input
+                    class="order-form__input"
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="phone"
+                >
+                    Телефон
+                </label>
+
+                <input
+                    class="order-form__input"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                >
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="date"
+                >
+                    Дата
+                </label>
+
+                <input
+                    class="order-form__input"
+                    id="date"
+                    name="date"
+                    type="date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="topic"
+                >
+                    Тема
+                </label>
+
+                <select
+                    class="order-form__select"
+                    id="topic"
+                    name="topic"
+                    required
+                >
+                    <option value="">
+                        Выберите тему
+                    </option>
+
+                    <option value="order">
+                        Оформление заказа
+                    </option>
+
+                    <option value="question">
+                        Вопрос о товаре
+                    </option>
+
+                    <option value="delivery">
+                        Доставка
+                    </option>
+                </select>
+
+            </div>
+
+
+            <div class="order-form__field">
+
+                <label
+                    class="order-form__label"
+                    for="comment"
+                >
+                    Комментарий
+                </label>
+
+                <textarea
+                    class="order-form__textarea"
+                    id="comment"
+                    name="comment"
+                    rows="4"
+                    placeholder="Ваш комментарий"
+                ></textarea>
+
+            </div>
+
+
+            <div class="order-form__field order-form__field--checkbox">
+
+                <label class="order-form__checkbox">
+
+                    <input
+                        type="checkbox"
+                        name="agreement"
+                        required
+                    >
+
+                    <span>
+                        Я согласен на обработку данных
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div class="order-form__actions">
+
+                <button
+                    class="button button--primary"
+                    type="submit"
+                >
+                    Отправить заявку
+                </button>
+
+                <button
+                    class="button button--secondary"
+                    id="cancel-order"
+                    type="button"
+                >
+                    Отмена
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </dialog>
 
-<div class="success-message" id="success-message" hidden>
-  <p>Заказ успешно отправлен!</p>
-</div>
+
+<p
+    class="success-message"
+    id="success-message"
+    hidden
+>
+    Заявка успешно отправлена!
+</p>
+
 
 <button
-  class="scroll-top"
-  id="scroll-top"
-  type="button"
-  aria-label="Вернуться в начало страницы"
+    class="scroll-top"
+    id="scroll-top"
+    type="button"
 >
-  ↑ Наверх
+    Наверх
 </button>
+
+
+<script
+    src="js/main.js"
+    defer
+></script>
 
 </body>
 </html>
