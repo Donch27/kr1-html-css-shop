@@ -1,449 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Каталог — IceForce</title>
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — IceForce</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-
 <body>
-
 <header class="site-header">
-
-    <div class="site-header__inner">
-
-        <a
-            class="site-header__logo"
-            href="index.html"
-        >
-            IceForce
-        </a>
-
-
-        <nav
-            class="site-nav"
-            aria-label="Основная навигация"
-        >
-
-            <ul class="site-nav__list">
-
-                <li>
-                    <a
-                        class="site-nav__link"
-                        href="index.html"
-                    >
-                        Главная
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        class="site-nav__link site-nav__link--active"
-                        href="catalog.html"
-                    >
-                        Каталог
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        class="site-nav__link"
-                        href="contacts.html"
-                    >
-                        Контакты
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        class="site-nav__link"
-                        href="index.html#advantages"
-                    >
-                        Преимущества
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        class="site-nav__link"
-                        href="index.html#popular"
-                    >
-                        Товары
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        class="site-nav__link"
-                        href="index.html#contacts"
-                    >
-                        Обратная связь
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html">IceForce</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        <li><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+        <li><a class="site-nav__link" href="index.html#popular">Товары</a></li>
+        <li><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-
 <main>
-
-    <div class="container">
-
-        <nav
-            class="breadcrumbs"
-            aria-label="Хлебные крошки"
-        >
-
-            <a
-                class="breadcrumbs__link"
-                href="index.html"
-            >
-                Главная
-            </a>
-
-            <span class="breadcrumbs__current">
-                Каталог
-            </span>
-
-        </nav>
-
-
-        <section class="catalog-intro">
-
-            <h1>
-                Каталог хоккейной экипировки
-            </h1>
-
-            <p>
-                Выберите необходимое оборудование
-                для тренировок и матчей.
-            </p>
-
-        </section>
-
-
-        <section class="catalog-layout">
-
-
-            <aside class="catalog-filters">
-
-                <h2>
-                    Фильтры
-                </h2>
-
-
-                <form
-                    class="filters-form"
-                    action="#"
-                    method="get"
-                >
-
-                    <fieldset>
-
-                        <legend>
-                            Категория
-                        </legend>
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="all"
-                            >
-
-                            Все товары
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="equipment"
-                            >
-
-                            Инвентарь
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="protection"
-                            >
-
-                            Защита
-                        </label>
-
-                    </fieldset>
-
-
-                    <fieldset>
-
-                        <legend>
-                            Цена
-                        </legend>
-
-
-                        <label for="price-from">
-                            От
-                        </label>
-
-                        <input
-                            id="price-from"
-                            name="price-from"
-                            type="number"
-                            min="0"
-                            placeholder="0"
-                        >
-
-
-                        <label for="price-to">
-                            До
-                        </label>
-
-                        <input
-                            id="price-to"
-                            name="price-to"
-                            type="number"
-                            min="0"
-                            placeholder="5000"
-                        >
-
-                    </fieldset>
-
-
-                    <button
-                        class="button button--primary"
-                        type="submit"
-                    >
-                        Применить
-                    </button>
-
-                </form>
-
-            </aside>
-
-
-            <section class="catalog-products">
-
-                <h2>
-                    Хоккейные товары
-                </h2>
-
-
-                <div class="products-grid">
-
-
-                    <article class="product-card">
-
-                        <div class="product-card__image-wrapper">
-
-                            <span class="product-card__badge">
-                                Хит
-                            </span>
-
-                            <img
-                                class="product-card__image"
-                                src="images/hockey-stick.jpg"
-                                alt="Хоккейная клюшка"
-                            >
-
-                        </div>
-
-                        <p class="product-card__category">
-                            Инвентарь
-                        </p>
-
-                        <h3 class="product-card__title">
-                            Хоккейная клюшка
-                        </h3>
-
-                        <p class="product-card__description">
-                            Лёгкая и прочная клюшка для точных
-                            передач и мощных бросков.
-                        </p>
-
-                        <p class="product-card__price">
-                            1000 руб.
-                        </p>
-
-                        <a
-                            class="button button--primary"
-                            href="index.html#popular"
-                        >
-                            Подробнее
-                        </a>
-
-                    </article>
-
-
-                    <article class="product-card">
-
-                        <div class="product-card__image-wrapper">
-
-                            <span
-                                class="product-card__badge product-card__badge--new"
-                            >
-                                Новинка
-                            </span>
-
-                            <img
-                                class="product-card__image"
-                                src="images/hockey-chest.jpg"
-                                alt="Хоккейный нагрудник"
-                            >
-
-                        </div>
-
-                        <p class="product-card__category">
-                            Защита
-                        </p>
-
-                        <h3 class="product-card__title">
-                            Хоккейный нагрудник
-                        </h3>
-
-                        <p class="product-card__description">
-                            Защитный нагрудник с усиленными
-                            плечами для уверенной игры.
-                        </p>
-
-                        <p class="product-card__price">
-                            1500 руб.
-                        </p>
-
-                        <a
-                            class="button button--primary"
-                            href="index.html#popular"
-                        >
-                            Подробнее
-                        </a>
-
-                    </article>
-
-
-                    <article class="product-card">
-
-                        <div class="product-card__image-wrapper">
-
-                            <span
-                                class="product-card__badge product-card__badge--discount"
-                            >
-                                Популярный
-                            </span>
-
-                            <img
-                                class="product-card__image"
-                                src="images/hockey-helmet.jpg"
-                                alt="Хоккейный шлем"
-                            >
-
-                        </div>
-
-                        <p class="product-card__category">
-                            Защита
-                        </p>
-
-                        <h3 class="product-card__title">
-                            Хоккейный шлем
-                        </h3>
-
-                        <p class="product-card__description">
-                            Надёжный шлем с защитной решёткой
-                            и удобной посадкой.
-                        </p>
-
-                        <p class="product-card__price">
-                            2000 руб.
-                        </p>
-
-                        <a
-                            class="button button--primary"
-                            href="index.html#popular"
-                        >
-                            Подробнее
-                        </a>
-
-                    </article>
-
-
-                </div>
-
-            </section>
-
-        </section>
-
-    </div>
-
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="catalog-intro">
+      <h1>Каталог хоккейной экипировки</h1>
+      <p>Экипировка, защита и инвентарь для тренировок и матчей.</p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2>Категории</h2>
+        <form class="filters-form" action="catalog.html" method="get">
+          <fieldset>
+            <legend>Категория</legend>
+            <label><input type="checkbox" name="category" value="all"> Все товары</label>
+            <label><input type="checkbox" name="category" value="clothing"> Одежда</label>
+            <label><input type="checkbox" name="category" value="protection"> Защита</label>
+            <label><input type="checkbox" name="category" value="equipment"> Инвентарь</label>
+          </fieldset>
+          <fieldset>
+            <legend>Цена, руб.</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="30000">
+          </fieldset>
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <h2>Все товары <span>(12)</span></h2>
+        <div class="products-grid">
+          <article class="product-card" data-category="equipment" data-price="12990">
+            <div class="product-card__image-wrapper"><span class="product-card__badge">Хит</span><img class="product-card__image" src="images/hockey-stick.jpg" alt="Хоккейная клюшка"></div>
+            <p class="product-card__category">Инвентарь</p><h3 class="product-card__title">Хоккейная клюшка</h3>
+            <p class="product-card__description">Лёгкая клюшка для точных передач и мощных бросков.</p><p class="product-card__price">12 990 руб.</p>
+            <a class="button button--primary" href="index.html#popular">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="14990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/hockey-chest.jpg" alt="Хоккейный нагрудник"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Хоккейный нагрудник</h3>
+            <p class="product-card__description">Защита корпуса и плеч для тренировок и матчей.</p><p class="product-card__price">14 990 руб.</p>
+            <a class="button button--primary" href="index.html#popular">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="9990">
+            <div class="product-card__image-wrapper"><span class="product-card__badge product-card__badge--new">Популярный</span><img class="product-card__image" src="images/hockey-helmet.jpg" alt="Хоккейный шлем"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Хоккейный шлем</h3>
+            <p class="product-card__description">Шлем с защитной решёткой и регулировкой посадки.</p><p class="product-card__price">9 990 руб.</p>
+            <a class="button button--primary" href="index.html#popular">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="clothing" data-price="5990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-thermal.jpg" alt="Хоккейное термобельё"></div>
+            <p class="product-card__category">Одежда</p><h3 class="product-card__title">Термобельё</h3>
+            <p class="product-card__description">Комплект базового слоя для комфорта во время тренировок.</p><p class="product-card__price">5 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="clothing" data-price="2490">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-gamashi.jpg" alt="Хоккейные гамаши"></div>
+            <p class="product-card__category">Одежда</p><h3 class="product-card__title">Гамаши</h3>
+            <p class="product-card__description">Эластичные гамаши для фиксации щитков.</p><p class="product-card__price">2 490 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="8990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-gloves.jpg" alt="Хоккейные перчатки"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Хоккейные перчатки</h3>
+            <p class="product-card__description">Защита кистей и пальцев с гибкой посадкой.</p><p class="product-card__price">8 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="3990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-visor.jpg" alt="Визор для хоккейного шлема"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Визор</h3>
+            <p class="product-card__description">Прозрачный защитный экран для хоккейного шлема.</p><p class="product-card__price">3 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="6990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-elbow-pads.jpg" alt="Хоккейные налокотники"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Налокотники</h3>
+            <p class="product-card__description">Защитные налокотники с амортизирующими вставками.</p><p class="product-card__price">6 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="9990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-hockey-shorts.jpg" alt="Хоккейные шорты"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Хоккейные шорты</h3>
+            <p class="product-card__description">Защитные шорты с усиленными зонами бёдер и копчика.</p><p class="product-card__price">9 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="protection" data-price="8490">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-shin-guards.jpg" alt="Хоккейные щитки"></div>
+            <p class="product-card__category">Защита</p><h3 class="product-card__title">Щитки</h3>
+            <p class="product-card__description">Щитки для защиты голени и коленного сустава.</p><p class="product-card__price">8 490 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="equipment" data-price="24990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-skates.jpg" alt="Хоккейные коньки"></div>
+            <p class="product-card__category">Инвентарь</p><h3 class="product-card__title">Хоккейные коньки</h3>
+            <p class="product-card__description">Коньки с поддержкой голеностопа для игры на льду.</p><p class="product-card__price">24 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+          <article class="product-card" data-category="clothing" data-price="4990">
+            <div class="product-card__image-wrapper"><img class="product-card__image" src="images/category-jersey.jpg" alt="Хоккейный джерси"></div>
+            <p class="product-card__category">Одежда</p><h3 class="product-card__title">Джерси</h3>
+            <p class="product-card__description">Хоккейная игровая майка для тренировок и матчей.</p><p class="product-card__price">4 990 руб.</p>
+            <a class="button button--primary" href="contacts.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </div>
 </main>
 
-
-<footer
-    class="site-footer"
-    id="contacts"
->
-
-    <div class="container">
-
-        <h2 class="site-footer__title">
-            IceForce
-        </h2>
-
-        <p>
-            Хоккейная экипировка для тренировок
-            и соревнований.
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:info@iceforce.ru">
-                info@iceforce.ru
-            </a>
-        </p>
-
-        <p class="site-footer__copyright">
-            © 2026 IceForce. Учебный проект.
-        </p>
-
-    </div>
-
+<footer class="site-footer" id="contacts">
+  <div class="container">
+    <h2 class="site-footer__title">IceForce</h2>
+    <p>Хоккейная экипировка для тренировок и соревнований.</p>
+    <p>Email: <a href="mailto:info@iceforce.ru">info@iceforce.ru</a></p>
+    <p class="site-footer__copyright">© 2026 IceForce. Учебный проект.</p>
+  </div>
 </footer>
 
-
-<button
-    class="scroll-top"
-    id="scroll-top"
-    type="button"
->
-    Наверх
-</button>
-
-
-<script
-    src="js/main.js"
-    defer
-></script>
-
+<button class="scroll-top" id="scroll-top" type="button">Наверх</button>
+<script src="js/main.js" defer></script>
 </body>
 </html>
