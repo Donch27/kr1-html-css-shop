@@ -1081,3 +1081,112 @@ main {
 @media (min-width: 1500px) {
   .hero h1, .hero__title { font-size: clamp(36px, 2.5vw, 44px); }
 }
+
+
+/* ===== Новая цветовая тема IceForce ===== */
+
+:root {
+  --color-primary: #193D35;
+  --color-primary-dark: #102D27;
+  --color-danger: #B94A48;
+  --color-text: #26332F;
+  --color-muted: #59665F;
+  --color-bg: #FCFBF7;
+  --color-bg-secondary: #F5F2E9;
+  --color-border: #D8DED5;
+  --color-white: #FFFFFF;
+}
+
+/* Шапка и логотип */
+.site-header {
+  background-color: #193D35;
+  border-bottom-color: #102D27;
+}
+
+.site-header__logo,
+.site-header__logo:hover {
+  color: #F5F2E9;
+}
+
+.site-nav__link {
+  color: #F5F2E9;
+}
+
+.site-nav__link:hover {
+  color: #193D35;
+  background-color: #E5E9DF;
+}
+
+.site-nav__link--active {
+  color: #193D35;
+  background-color: #D9B477;
+}
+
+/* Первый экран: контрастный текст поверх фотографии */
+.hero {
+  background-image:
+    linear-gradient(
+      rgba(15, 39, 33, 0.68),
+      rgba(15, 39, 33, 0.68)
+    ),
+    url("../images/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+}
+
+.hero p {
+  color: #FFFFFF;
+}
+
+/* Главная кнопка */
+.button--primary {
+  color: #193D35;
+  background-color: #D9B477;
+  font-weight: 700;
+}
+
+.button--primary:hover {
+  color: #193D35;
+  background-color: #E8C993;
+}
+
+/* Карточки товаров */
+.product-card,
+.advantage,
+.category-card {
+  background-color: #FFFFFF;
+}
+
+.product-card,
+.advantage {
+  border-color: #D8DED5;
+}
+
+.product-card:hover,
+.product-card--featured {
+  border-color: #C77B45;
+}
+
+/* Блоки фильтров и информации */
+.catalog-filters,
+.contacts-info,
+.info-block {
+  background-color: #F5F2E9;
+}
+
+/* Нижняя часть сайта */
+.site-footer {
+  background-color: #193D35;
+  color: #FFFFFF;
+}
+
+/* Выделение элементов при наведении */
+.category-arrow:hover:not(:disabled) {
+  background-color: #193D35;
+  border-color: #193D35;
+  color: #FFFFFF;
+}
