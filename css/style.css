@@ -717,3 +717,95 @@ main {
         height: 210px;
     }
 }
+
+
+/* Общие настройки размеров */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Страница занимает всю высоту окна */
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Основное содержимое растягивает страницу до футера */
+main {
+  flex: 1 0 auto;
+  min-width: 0;
+}
+
+/* Футер */
+.site-footer {
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 24px 20px;
+}
+
+.site-footer__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.site-footer__text {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  min-width: 0;
+}
+
+.site-footer__links a {
+  overflow-wrap: anywhere;
+}
+
+/* Планшеты и уменьшенный масштаб */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 20px 16px;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__links {
+    max-width: 100%;
+  }
+}
+
+/* Узкие экраны */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 16px 12px;
+  }
+
+  .site-footer__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
