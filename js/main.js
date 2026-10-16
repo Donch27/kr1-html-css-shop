@@ -119,3 +119,54 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// Горизонтальная прокрутка категорий: колёсико мыши и кнопки-стрелки.
+document.addEventListener("DOMContentLoaded", () => {
+  const tracks = [
+    document.querySelector("#featured-track"),
+    document.querySelector("#all-category-track")
+  ].filter(Boolean);
+
+  function updateButtons(track) {
+    const id = track.id;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    document.querySelectorAll(`[data-scroll-target="${id}"]`).forEach((button) => {
+      const direction = button.dataset.direction;
+      button.disabled = direction === "left"
+        ? track.scrollLeft <= 2
+        : track.scrollLeft >= maxScroll - 2;
+    });
+  }
+
+  tracks.forEach((track) => {
+    // Вертикальное колесо мыши над каруселью двигает ленту по горизонтали.
+    track.addEventListener("wheel", (event) => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 0) return;
+      const delta = Math.abs(event.deltaY) > Math.abs(event.deltaX)
+        ? event.deltaY
+        : event.deltaX;
+      if (delta !== 0) {
+        event.preventDefault();
+        track.scrollLeft += delta;
+      }
+    }, { passive: false });
+
+    track.addEventListener("scroll", () => updateButtons(track), { passive: true });
+    window.addEventListener("resize", () => updateButtons(track));
+    updateButtons(track);
+  });
+
+  document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const track = document.getElementById(button.dataset.scrollTarget);
+      if (!track) return;
+      const firstCard = track.querySelector(".category-card, .category-slide");
+      const step = firstCard ? firstCard.getBoundingClientRect().width + 16 : 250;
+      track.scrollBy({
+        left: (button.dataset.direction === "right" ? 1 : -1) * step,
+        behavior: "smooth"
+      });
+    });
+  });
+});
