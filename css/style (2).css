@@ -145,13 +145,26 @@ main {
    Hero
    =============================== */
 
+
 .hero {
   margin: var(--space-lg) 0;
   padding: 60px var(--space-lg);
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-secondary);
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+    url("../images/hero-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   text-align: center;
 }
+
 
 .hero__content {
   max-width: 760px;
