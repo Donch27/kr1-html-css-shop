@@ -1190,3 +1190,78 @@ main {
   border-color: #193D35;
   color: #FFFFFF;
 }
+
+
+/* ===== Премиальные карточки преимуществ IceForce ===== */
+
+.advantage {
+  position: relative;
+  overflow: hidden;
+  padding: 27px 25px 25px 28px;
+  background: linear-gradient(
+    135deg,
+    #FFFFFF 0%,
+    #F7F5EE 100%
+  );
+  border: 1px solid #D9DED5;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(25, 61, 53, 0.045);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Медный акцент слева */
+.advantage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #C77B45;
+  opacity: 0.85;
+  transition: width 0.25s ease;
+}
+
+/* Заголовок карточки */
+.advantage h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #193D35;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Описание */
+.advantage p {
+  margin-bottom: 0;
+  color: #59665F;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* Эффект при наведении */
+.advantage:hover {
+  transform: translateY(-4px);
+  border-color: #C7A47A;
+  box-shadow: 0 10px 26px rgba(25, 61, 53, 0.10);
+}
+
+.advantage:hover::before {
+  width: 6px;
+}
+
+/* Учитываем настройки уменьшения анимации */
+@media (prefers-reduced-motion: reduce) {
+  .advantage,
+  .advantage::before {
+    transition: none;
+  }
+
+  .advantage:hover {
+    transform: none;
+  }
+}
