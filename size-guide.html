@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Руководство по выбору размерной категории хоккейной экипировки IceForce.">
+    <title>Подбор экипировки — IceForce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .size-page {
+            padding-top: 28px;
+            padding-bottom: 60px;
+        }
+
+        .size-hero {
+            padding: 42px 32px;
+            margin-bottom: 32px;
+            background: #193D35;
+            color: #fff;
+            border-radius: 14px;
+        }
+
+        .size-hero h1 {
+            margin-top: 0;
+            color: #fff;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .size-hero p {
+            max-width: 700px;
+            color: #F5F2E9;
+            line-height: 1.8;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin: 24px 0 32px;
+        }
+
+        .size-card {
+            padding: 26px;
+            background: #fff;
+            border: 1px solid #D8DED5;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(25, 61, 53, .05);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .size-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 22px rgba(25, 61, 53, .1);
+        }
+
+        .size-card__code {
+            display: inline-block;
+            padding: 7px 12px;
+            margin-bottom: 14px;
+            color: #193D35;
+            background: #F5F2E9;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .size-card h2 {
+            margin-top: 0;
+            color: #193D35;
+            font-size: 21px;
+        }
+
+        .size-card p {
+            color: #59665F;
+            line-height: 1.8;
+        }
+
+        .size-advice {
+            padding: 24px;
+            margin: 28px 0;
+            background: #F5F2E9;
+            border-left: 4px solid #C77B45;
+            border-radius: 8px;
+        }
+
+        .size-advice h2 {
+            margin-top: 0;
+            color: #193D35;
+        }
+
+        .size-advice li {
+            margin-bottom: 10px;
+            color: #59665F;
+            line-height: 1.7;
+        }
+
+        .size-action {
+            padding: 30px;
+            text-align: center;
+            background: #F5F2E9;
+            border-radius: 12px;
+        }
+
+        .size-action h2 {
+            color: #193D35;
+        }
+
+        .size-action p {
+            line-height: 1.7;
+        }
+
+        @media (max-width: 650px) {
+            .size-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .size-hero {
+                padding: 28px 22px;
+            }
+
+            .size-card {
+                padding: 22px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .size-card {
+                transition: none;
+            }
+
+            .size-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">IceForce</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                <li><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+                <li><a class="site-nav__link" href="size-guide.html" aria-current="page">Подбор экипировки</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container size-page">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Подбор экипировки</span>
+    </nav>
+
+    <section class="size-hero">
+        <h1>Подбери экипировку правильно</h1>
+        <p>
+            У хоккейной экипировки есть разные размерные категории.
+            Выбирай подходящий вариант с учётом возраста, комплекции,
+            посадки и рекомендаций производителя.
+        </p>
+        <a class="button button--primary" href="catalog.html">
+            Перейти к товарам
+        </a>
+    </section>
+
+    <section>
+        <h2 class="section-title">Размерные категории</h2>
+        <p>
+            В нашем интерфейсе используются четыре условные категории.
+            Они помогают обозначить общий диапазон размеров, но не заменяют
+            таблицу размеров конкретного производителя.
+        </p>
+
+        <div class="size-grid">
+            <article class="size-card">
+                <span class="size-card__code">YTH</span>
+                <h2>Youth — детский</h2>
+                <p>
+                    Категория детской экипировки. При выборе учитывай
+                    рост ребёнка, параметры тела и рекомендации бренда.
+                </p>
+            </article>
+
+            <article class="size-card">
+                <span class="size-card__code">JR</span>
+                <h2>Junior — юниорский</h2>
+                <p>
+                    Категория, предназначенная для юниоров.
+                    Конкретный диапазон размеров зависит от типа изделия
+                    и производителя.
+                </p>
+            </article>
+
+            <article class="size-card">
+                <span class="size-card__code">INT</span>
+                <h2>Intermediate — промежуточный</h2>
+                <p>
+                    Промежуточная категория между юниорской и взрослой
+                    экипировкой у производителей, которые её используют.
+                </p>
+            </article>
+
+            <article class="size-card">
+                <span class="size-card__code">SR</span>
+                <h2>Senior — взрослый</h2>
+                <p>
+                    Категория взрослой экипировки. Для правильного выбора
+                    необходимо проверить таблицу размеров конкретной модели.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="size-advice">
+        <h2>На что обратить внимание</h2>
+        <ul>
+            <li>
+                <strong>Шлем:</strong> проверь, что он надёжно фиксируется
+                и соответствует рекомендациям производителя.
+            </li>
+            <li>
+                <strong>Нагрудник и налокотники:</strong> защита должна
+                подходить по размеру и не ограничивать движения.
+            </li>
+            <li>
+                <strong>Перчатки:</strong> пальцы должны свободно двигаться,
+                а посадка не должна мешать хвату клюшки.
+            </li>
+            <li>
+                <strong>Коньки:</strong> ориентируйся на размерную сетку
+                производителя и особенности посадки конкретной модели.
+            </li>
+            <li>
+                <strong>Остальная экипировка:</strong> сверяй измерения
+                с таблицей бренда, а не только с обозначением YTH, JR,
+                INT или SR.
+            </li>
+        </ul>
+    </section>
+
+    <section class="size-action">
+        <h2>Готов выбрать экипировку?</h2>
+        <p>
+            Открой каталог IceForce, просмотри товары и перейди
+            к оформлению демонстрационной заявки.
+        </p>
+        <a class="button button--primary" href="catalog.html">
+            Открыть каталог
+        </a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <h2 class="site-footer__title">IceForce</h2>
+        <p>Хоккейная экипировка для тренировок и матчей.</p>
+        <p>
+            <a href="contacts.html">Контакты</a>
+            ·
+            <a href="delivery.html">Доставка и оплата</a>
+            ·
+            <a href="size-guide.html">Подбор экипировки</a>
+        </p>
+        <p class="site-footer__copyright">© 2026 IceForce. Учебный проект.</p>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top" type="button">Наверх</button>
+
+<script src="js/main.js" defer></script>
+<script src="js/size-feature.js" defer></script>
+<script src="js/category-slider.js" defer></script>
+
+</body>
+</html>

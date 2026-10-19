@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Информация о доставке, оплате и оформлении заказов в IceForce.">
+    <title>Доставка и оплата — IceForce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .delivery-page {
+            padding-top: 28px;
+            padding-bottom: 60px;
+        }
+
+        .delivery-hero {
+            padding: 42px 32px;
+            margin-bottom: 28px;
+            background: #193D35;
+            color: #fff;
+            border-radius: 14px;
+        }
+
+        .delivery-hero h1 {
+            margin-top: 0;
+            color: #fff;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .delivery-hero p {
+            max-width: 680px;
+            color: #F5F2E9;
+            line-height: 1.8;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin: 24px 0 36px;
+        }
+
+        .delivery-card {
+            padding: 26px;
+            background: #fff;
+            border: 1px solid #D8DED5;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(25, 61, 53, .05);
+        }
+
+        .delivery-card h2 {
+            margin-top: 0;
+            color: #193D35;
+            font-size: 21px;
+        }
+
+        .delivery-card p,
+        .delivery-card li {
+            color: #59665F;
+            line-height: 1.8;
+        }
+
+        .delivery-card ul {
+            padding-left: 20px;
+        }
+
+        .delivery-note {
+            padding: 22px 24px;
+            margin: 28px 0;
+            background: #F5F2E9;
+            border-left: 4px solid #C77B45;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .delivery-action {
+            padding: 28px;
+            text-align: center;
+            background: #F5F2E9;
+            border-radius: 12px;
+        }
+
+        .delivery-action h2 {
+            color: #193D35;
+        }
+
+        .delivery-action p {
+            line-height: 1.7;
+        }
+
+        @media (max-width: 650px) {
+            .delivery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .delivery-hero {
+                padding: 28px 22px;
+            }
+
+            .delivery-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">IceForce</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                <li><a class="site-nav__link" href="delivery.html" aria-current="page">Доставка и оплата</a></li>
+                <li><a class="site-nav__link" href="size-guide.html">Подбор экипировки</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container delivery-page">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Доставка и оплата</span>
+    </nav>
+
+    <section class="delivery-hero">
+        <h1>Доставка и оплата</h1>
+        <p>
+            Подготовься к следующей игре вместе с IceForce.
+            Здесь ты найдёшь информацию о том, как оформить заказ,
+            уточнить наличие экипировки и согласовать способ получения.
+        </p>
+        <a class="button button--primary" href="catalog.html">
+            Перейти в каталог
+        </a>
+    </section>
+
+    <section>
+        <h2 class="section-title">Как оформить заказ</h2>
+
+        <div class="delivery-grid">
+            <article class="delivery-card">
+                <h2>01. Выбери экипировку</h2>
+                <p>
+                    Открой каталог, ознакомься с товарами и выбери
+                    подходящую экипировку для тренировок или матчей.
+                </p>
+            </article>
+
+            <article class="delivery-card">
+                <h2>02. Укажи размер</h2>
+                <p>
+                    При оформлении демонстрационной заявки выбери
+                    размерную категорию и заполни необходимые поля.
+                </p>
+            </article>
+
+            <article class="delivery-card">
+                <h2>03. Уточни детали</h2>
+                <p>
+                    Перед покупкой необходимо подтвердить наличие товара,
+                    итоговую стоимость, способ получения и условия доставки.
+                </p>
+            </article>
+
+            <article class="delivery-card">
+                <h2>04. Согласуй получение</h2>
+                <p>
+                    Способ и сроки получения заказа должны быть согласованы
+                    с продавцом после подтверждения заявки.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Способы доставки</h2>
+
+        <div class="delivery-grid">
+            <article class="delivery-card">
+                <h2>Курьерская доставка</h2>
+                <p>
+                    Возможный вариант получения заказа по согласованному
+                    адресу. Доступность услуги, стоимость и сроки нужно
+                    уточнить перед оформлением покупки.
+                </p>
+            </article>
+
+            <article class="delivery-card">
+                <h2>Получение заказа</h2>
+                <p>
+                    Если предусмотрена выдача заказов, место и время
+                    получения согласовываются заранее.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Оплата</h2>
+
+        <div class="delivery-card">
+            <p>
+                Доступные способы оплаты, окончательная сумма и порядок
+                расчёта должны быть подтверждены до покупки.
+            </p>
+            <ul>
+                <li>Уточни стоимость выбранных товаров.</li>
+                <li>Узнай, какие способы оплаты доступны.</li>
+                <li>Проверь согласованные условия перед оплатой.</li>
+            </ul>
+        </div>
+
+        <div class="delivery-note">
+            <strong>Обрати внимание:</strong> IceForce в рамках учебного
+            проекта демонстрирует интерфейс интернет-магазина.
+            Реальные доставка, оплата и обработка заказов на сайте
+            не подключены. Информация на этой странице описывает
+            предполагаемый порядок оформления покупки.
+        </div>
+    </section>
+
+    <section class="delivery-action">
+        <h2>Остались вопросы?</h2>
+        <p>
+            Перейди на страницу контактов, чтобы посмотреть контактные
+            данные и информацию об обратной связи.
+        </p>
+        <a class="button button--primary" href="contacts.html">
+            Связаться с нами
+        </a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <h2 class="site-footer__title">IceForce</h2>
+        <p>Хоккейная экипировка для тренировок и матчей.</p>
+        <p>
+            <a href="contacts.html">Контакты</a>
+            ·
+            <a href="delivery.html">Доставка и оплата</a>
+            ·
+            <a href="size-guide.html">Подбор экипировки</a>
+        </p>
+        <p class="site-footer__copyright">© 2026 IceForce. Учебный проект.</p>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top" type="button">Наверх</button>
+
+<script src="js/main.js" defer></script>
+<script src="js/size-feature.js" defer></script>
+<script src="js/category-slider.js" defer></script>
+
+</body>
+</html>
